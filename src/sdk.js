@@ -29,7 +29,7 @@ export default class VylaSDK {
         const active = SOURCES.filter(cfg => !cfg.disabled);
 
         const results = await Promise.allSettled(
-            active.map(async cfg => await probeSource(this, cfg, SOURCE_MODULES[cfg.key]))
+            active.map(async cfg => await probeSource(cfg, SOURCE_MODULES[cfg.key]))
         );
 
         const sources = Object.fromEntries(
@@ -53,7 +53,7 @@ export default class VylaSDK {
         if (!cfg) throw new Error(`Source with key "${key}" not found`);
         const mod = SOURCE_MODULES[key];
         if (!mod) throw new Error(`Source module for key "${key}" not found`);
-        const streamArgs = await createStreamArgs(this, cfg, id, s, e, clientIP);
+        const streamArgs = await createStreamArgs(cfg, this, id, s, e, clientIP);
         return await mod.getStream(streamArgs);
     }
     async getSubtitles(id, s = null, e = null) {
