@@ -52,6 +52,7 @@ function pruneHelperCache(cache) {
     }
 }
 
+// Workers يمنع المؤقتات في النطاق العام؛ التنظيف يتم عند الوصول للذاكرة.
 function pruneCachesLazily() {
     pruneHelperCache(tmdbValidationCache);
     pruneHelperCache(tmdbInfoCache);
@@ -79,7 +80,7 @@ export async function createStreamArgs(source, sdk, id, s, e, clientIP = null) {
         audio,
         sdk,
         config: source,
-    };
+    }
 }
 
 export async function validateTmdbId(tmdbApiKey, tmdbId, mediaType = 'movie') {
