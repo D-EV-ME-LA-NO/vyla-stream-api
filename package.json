@@ -11,6 +11,7 @@
     "dry-run": "wrangler deploy --dry-run"
   },
   "devDependencies": {
+    "esbuild": "^0.28.1",
     "wrangler": "^4.148.0"
   }
 }
