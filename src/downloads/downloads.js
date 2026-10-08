@@ -1,7 +1,3 @@
-export async function fetchDownload(url) {
-  return {
-    ok: true,
-    url,
-    message: 'Download handler placeholder',
-  };
+export async function fetchDownloads(sdk, id, s = null, e = null) {
+  return [];
 }
