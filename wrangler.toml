@@ -1,0 +1,7 @@
+name = "vyla-stream-api"
+main = "src/worker.js"
+compatibility_date = "2026-10-08"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# TMDB_API_KEY can be added in the dashboard as an encrypted secret.

@@ -1,0 +1,16 @@
+{
+  "name": "vyla-stream-api-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Vyla Entertainment SDK authors",
+  "license": "CC-BY-NC-4.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.148.0"
+  }
+}
